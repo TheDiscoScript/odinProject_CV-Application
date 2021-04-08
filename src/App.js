@@ -6,11 +6,17 @@ import Main from "./components/Main";
 class App extends Component {
   render() {
     return (
-      <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
         <Header />
         <Main />
         <Footer />
-      </>
+      </div>
     );
   }
 }

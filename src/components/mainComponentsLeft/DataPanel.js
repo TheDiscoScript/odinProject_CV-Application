@@ -1,10 +1,10 @@
 import React from "react";
-import App from "./dataComponents/App";
+import CVData from "./dataComponents/App.js";
 
 const DataPanel = () => {
   return (
     <div>
-      <App />
+      <CVData />
     </div>
   );
 };

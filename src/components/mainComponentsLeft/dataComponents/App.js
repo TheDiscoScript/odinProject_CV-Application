@@ -5,7 +5,7 @@ import Education from "./Education";
 import Skills from "./Skills";
 import Buttons from "./Buttons";
 
-const App = () => {
+const CVData = () => {
   return (
     <>
       <PersonalInfo />
@@ -17,4 +17,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default CVData;

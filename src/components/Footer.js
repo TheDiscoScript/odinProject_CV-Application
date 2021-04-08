@@ -7,7 +7,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles(() => ({
   root: {
-    position: "absolute",
+    position: "relative",
     bottom: 0,
     width: "100%",
     alignContent: "center",
