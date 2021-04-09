@@ -31,7 +31,7 @@ class Experience extends Component {
         <Date label={datas.labels.From} />
         <Date label={datas.labels.To} />
         <Grid
-          item
+          container
           xs={12}
           sm={12}
           md={12}

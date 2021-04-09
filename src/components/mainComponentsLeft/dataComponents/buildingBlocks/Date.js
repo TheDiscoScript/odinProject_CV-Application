@@ -12,6 +12,9 @@ class Date extends Component {
           variant="filled"
           style={{ width: "100%", margin: "5px" }}
           placeholder="dd/mm/yyyy"
+          InputLabelProps={{
+            shrink: true,
+          }}
         />
       </Grid>
     );

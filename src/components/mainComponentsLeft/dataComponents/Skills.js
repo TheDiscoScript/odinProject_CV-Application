@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import Title from "./buildingBlocks/Title";
-import Text from "./buildingBlocks/Text";
 import Grid from "@material-ui/core/Grid";
+import RatingField from "./buildingBlocks/Rating";
 
 class Skills extends Component {
   render() {
     return (
-      <Grid>
+      <Grid container spacing={1}>
         <Title title={"Skills"} />
-        <Text />
+        <Grid container>
+          <RatingField />
+        </Grid>
       </Grid>
     );
   }
