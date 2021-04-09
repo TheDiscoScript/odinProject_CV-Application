@@ -1,11 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import CVData from "./dataComponents/App.js";
 
-const DataPanel = () => {
-  return (
-    <div>
-      <CVData />
-    </div>
-  );
-};
+class DataPanel extends Component {
+  render() {
+    return (
+      <div>
+        <CVData />
+      </div>
+    );
+  }
+}
 export default DataPanel;

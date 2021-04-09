@@ -1,6 +1,58 @@
-import React from "react";
+import React, { Component } from "react";
+import Title from "./buildingBlocks/Title";
+import Text from "./buildingBlocks/Text";
+import Grid from "@material-ui/core/Grid";
+import Date from "./buildingBlocks/Date";
+import CustomTextField from "./buildingBlocks/Textfield";
+import Buttons from "./buildingBlocks/Button";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-const Experience = () => {
-  return <div>Experience</div>;
-};
+class Experience extends Component {
+  render() {
+    const datas = {
+      labels: {
+        Position: "Position",
+        Company: "Company Name",
+        City: "City",
+        From: "From",
+        To: "To",
+      },
+      placeholder: {
+        Description: "What was your job?",
+      },
+    };
+    return (
+      <Grid container spacing={1}>
+        <Title title={"Experience"} />
+        <Text label={datas.labels.Position} />
+        <Text label={datas.labels.Company} />
+        <Text label={datas.labels.City} />
+        <Date label={datas.labels.From} />
+        <Date label={datas.labels.To} />
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={6}
+          fullwidth
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            width: "100%",
+          }}
+        >
+          <FormControlLabel
+            control={<Switch name="checkedB" color="primary" />}
+            label="Till now"
+          />
+        </Grid>
+        <CustomTextField placeholder={datas.placeholder.Description} />
+        <Buttons />
+      </Grid>
+    );
+  }
+}
 export default Experience;

@@ -14,7 +14,7 @@ class Text extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Grid item xs={12} sm={12} md={6} lg={6}>
+      <Grid item xs={12} sm={12} md={12} lg={6}>
         <TextField
           className={classes.root}
           variant="filled"

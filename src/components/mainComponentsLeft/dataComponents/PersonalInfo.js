@@ -3,7 +3,7 @@ import Title from "./buildingBlocks/Title";
 import Text from "./buildingBlocks/Text";
 import PhoneField from "material-ui-phone-number";
 import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
+import CustomTextField from "./buildingBlocks/Textfield";
 
 class PersonalInfo extends Component {
   render() {
@@ -21,6 +21,7 @@ class PersonalInfo extends Component {
       placeholder: {
         Email: "example@example.com",
         Adress: "Country, City",
+        Description: "Who are you?",
       },
       type: {
         Email: "email",
@@ -40,7 +41,7 @@ class PersonalInfo extends Component {
           label={datas.labels.Adress}
           placeholder={datas.placeholder.Adress}
         />
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+        <Grid item xs={12} sm={12} md={12} lg={6}>
           <PhoneField
             style={{ width: "100%", margin: "5px" }}
             variant="filled"
@@ -51,16 +52,7 @@ class PersonalInfo extends Component {
         <Text label={datas.labels.Photo} />
         <Text label={datas.labels.GitHub} />
         <Text label={datas.labels.LinkedIn} />
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <TextField
-            label="Description"
-            multiline
-            rows={4}
-            placeholder={"Who are you?"}
-            variant="outlined"
-            style={{ width: "100%", margin: "5px" }}
-          />
-        </Grid>
+        <CustomTextField placeholder={datas.placeholder.Description} />
       </Grid>
     );
   }
