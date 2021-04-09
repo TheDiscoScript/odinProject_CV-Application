@@ -8,7 +8,14 @@ import DeleteIcon from "@material-ui/icons/Delete";
 class Buttons extends Component {
   render() {
     return (
-      <Grid item xs={12} sm={12} md={12} lg={12}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        style={{ marginBottom: "10px" }}
+      >
         <ButtonGroup
           style={{ width: "100%" }}
           variant="contained"

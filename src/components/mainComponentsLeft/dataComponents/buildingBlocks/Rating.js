@@ -5,7 +5,6 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
-import AddIcon from "@material-ui/icons/Add";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 class RatingField extends Component {
@@ -33,9 +32,6 @@ class RatingField extends Component {
         </Grid>
         <Grid item>
           <ButtonGroup variant="contained">
-            <Button color="primary">
-              <AddIcon />
-            </Button>
             <Button color="secondary">
               <DeleteIcon />
             </Button>

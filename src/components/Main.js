@@ -26,7 +26,10 @@ const Main = () => {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={12} md={8} lg={8}>
-          <Paper className={classes.paper}>
+          <Paper
+            className={classes.paper}
+            style={{ position: "sticky", top: "10px" }}
+          >
             <PreviewPanel />
           </Paper>
         </Grid>
