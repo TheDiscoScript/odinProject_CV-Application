@@ -20,7 +20,7 @@ const Main = () => {
   return (
     <div className={classes.root}>
       <Grid container style={{ justifyContent: "center", textAlign: "center" }}>
-        <Grid item xs={12} sm={12} md={4} lg={5}>
+        <Grid item xs={12} sm={12} md={3} lg={5}>
           <Paper className={classes.paper}>
             <DataPanel />
           </Paper>
@@ -29,9 +29,12 @@ const Main = () => {
           container
           xs={12}
           sm={12}
-          md={8}
+          md={9}
           lg={7}
-          style={{ justifyContent: "center", textAlign: "center" }}
+          style={{
+            justifyContent: "center",
+            textAlign: "center",
+          }}
         >
           <Paper
             className={classes.paper}
@@ -42,7 +45,7 @@ const Main = () => {
               height: "297mm",
               padding: "0",
             }}
-            elevation={12}
+            elevation={18}
           >
             <PreviewPanel />
           </Paper>
