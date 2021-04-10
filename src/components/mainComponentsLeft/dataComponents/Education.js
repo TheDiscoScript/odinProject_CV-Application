@@ -6,6 +6,7 @@ import Date from "./buildingBlocks/Date";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Buttons from "./buildingBlocks/Button";
+import ButtonAdd from "./buildingBlocks/ButtonAdd";
 
 class Education extends Component {
   render() {
@@ -21,34 +22,37 @@ class Education extends Component {
       placeholder: {},
     };
     return (
-      <Grid container spacing={1}>
-        <Title title={"Education"} />
-        <Text label={datas.labels.Name} />
-        <Text label={datas.labels.City} />
-        <Text label={datas.labels.Degree} />
-        <Text label={datas.labels.Subject} />
-        <Date label={datas.labels.From} />
-        <Date label={datas.labels.To} />
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          fullwidth
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          <FormControlLabel
-            control={<Switch name="checkedB" color="primary" />}
-            label="Till now"
-          />
+      <Grid container>
+        <Grid container spacing={1}>
+          <Title title={"Education"} />
+          <Text label={datas.labels.Name} />
+          <Text label={datas.labels.City} />
+          <Text label={datas.labels.Degree} />
+          <Text label={datas.labels.Subject} />
+          <Date label={datas.labels.From} />
+          <Date label={datas.labels.To} />
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            fullwidth
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              width: "100%",
+            }}
+          >
+            <FormControlLabel
+              control={<Switch name="checkedB" color="primary" />}
+              label="Till now"
+            />
+          </Grid>
+          <Buttons />
         </Grid>
-        <Buttons />
+        <ButtonAdd />
       </Grid>
     );
   }

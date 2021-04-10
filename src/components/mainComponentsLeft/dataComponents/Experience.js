@@ -7,6 +7,7 @@ import CustomTextField from "./buildingBlocks/Textfield";
 import Buttons from "./buildingBlocks/Button";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import ButtonAdd from "./buildingBlocks/ButtonAdd";
 
 class Experience extends Component {
   render() {
@@ -23,34 +24,37 @@ class Experience extends Component {
       },
     };
     return (
-      <Grid container spacing={1}>
-        <Title title={"Experience"} />
-        <Text label={datas.labels.Position} />
-        <Text label={datas.labels.Company} />
-        <Text label={datas.labels.City} />
-        <Date label={datas.labels.From} />
-        <Date label={datas.labels.To} />
-        <Grid
-          container
-          xs={12}
-          sm={12}
-          md={12}
-          lg={6}
-          fullwidth
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          <FormControlLabel
-            control={<Switch name="checkedB" color="primary" />}
-            label="Till now"
-          />
+      <Grid container>
+        <Grid container spacing={1}>
+          <Title title={"Experience"} />
+          <Text label={datas.labels.Position} />
+          <Text label={datas.labels.Company} />
+          <Text label={datas.labels.City} />
+          <Date label={datas.labels.From} />
+          <Date label={datas.labels.To} />
+          <Grid
+            container
+            xs={12}
+            sm={12}
+            md={12}
+            lg={6}
+            fullwidth
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              width: "100%",
+            }}
+          >
+            <FormControlLabel
+              control={<Switch name="checkedB" color="primary" />}
+              label="Till now"
+            />
+          </Grid>
+          <CustomTextField placeholder={datas.placeholder.Description} />
+          <Buttons />
         </Grid>
-        <CustomTextField placeholder={datas.placeholder.Description} />
-        <Buttons />
+        <ButtonAdd />
       </Grid>
     );
   }

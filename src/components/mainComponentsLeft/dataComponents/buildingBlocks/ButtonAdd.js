@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
+import AddIcon from "@material-ui/icons/Add";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Grid from "@material-ui/core/Grid";
-import DeleteIcon from "@material-ui/icons/Delete";
 
-class Buttons extends Component {
+class ButtonAdd extends Component {
   render() {
     return (
       <Grid
@@ -20,12 +20,12 @@ class Buttons extends Component {
           variant="contained"
           aria-label="contained primary button group"
         >
-          <Button color="secondary" style={{ width: "100%" }}>
-            <DeleteIcon />
+          <Button color="primary" style={{ width: "100%" }}>
+            <AddIcon />
           </Button>
         </ButtonGroup>
       </Grid>
     );
   }
 }
-export default Buttons;
+export default ButtonAdd;

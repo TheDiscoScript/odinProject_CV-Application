@@ -20,7 +20,11 @@ class RatingField extends Component {
         spacing={2}
       >
         <Grid item>
-          <TextField label="Standard" variant="standard" />
+          <TextField
+            label="Skill"
+            variant="standard"
+            placeholder="Are you good at... React?"
+          />
         </Grid>
         <Grid item>
           <Rating
