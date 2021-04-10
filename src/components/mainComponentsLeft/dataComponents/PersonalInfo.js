@@ -41,7 +41,7 @@ class PersonalInfo extends Component {
           label={datas.labels.Adress}
           placeholder={datas.placeholder.Adress}
         />
-        <Grid item xs={12} sm={12} md={12} lg={6}>
+        <Grid item xs={12} sm={6} md={12} lg={6}>
           <PhoneField
             style={{ width: "100%", margin: "5px" }}
             variant="filled"

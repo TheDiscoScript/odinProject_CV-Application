@@ -35,7 +35,7 @@ class Experience extends Component {
           <Grid
             container
             xs={12}
-            sm={12}
+            sm={6}
             md={12}
             lg={6}
             fullwidth

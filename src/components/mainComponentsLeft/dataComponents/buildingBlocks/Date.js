@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 class Date extends Component {
   render() {
     return (
-      <Grid item xs={12} sm={12} md={12} lg={6}>
+      <Grid item xs={12} sm={6} md={12} lg={6}>
         <TextField
           label={this.props.label}
           type="date"

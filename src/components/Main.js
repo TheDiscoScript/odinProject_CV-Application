@@ -19,16 +19,30 @@ const Main = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={4} lg={4}>
+      <Grid container style={{ justifyContent: "center", textAlign: "center" }}>
+        <Grid item xs={12} sm={12} md={4} lg={5}>
           <Paper className={classes.paper}>
             <DataPanel />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={12} md={8} lg={8}>
+        <Grid
+          container
+          xs={12}
+          sm={12}
+          md={8}
+          lg={7}
+          style={{ justifyContent: "center", textAlign: "center" }}
+        >
           <Paper
             className={classes.paper}
-            style={{ position: "sticky", top: "10px" }}
+            style={{
+              position: "sticky",
+              top: "10px",
+              width: "210mm",
+              height: "297mm",
+              padding: "0",
+            }}
+            elevation={12}
           >
             <PreviewPanel />
           </Paper>
