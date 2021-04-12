@@ -5,7 +5,9 @@ class NormalText extends Component {
   render() {
     return (
       <>
-        <Typography variant="body1">Normal Text</Typography>
+        <Typography style={{ padding: "5px" }} variant="body1">
+          {this.props.text}
+        </Typography>
       </>
     );
   }

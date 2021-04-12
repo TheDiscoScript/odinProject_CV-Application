@@ -7,7 +7,7 @@ class SectionTitle extends Component {
     return (
       <>
         <Typography variant="h6" color="primary">
-          SectionTitle
+          {this.props.title}
         </Typography>
         <Divider />
       </>

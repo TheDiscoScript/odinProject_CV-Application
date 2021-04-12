@@ -5,8 +5,11 @@ class BoldText extends Component {
   render() {
     return (
       <>
-        <Typography variant="subtitle2" style={{ fontSize: "1.1rem" }}>
-          Bold Text
+        <Typography
+          variant="subtitle2"
+          style={{ fontSize: "1.1rem", padding: "5px" }}
+        >
+          {this.props.title}
         </Typography>
       </>
     );
