@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HeaderName from "./buildingBlocks/HeaderName";
+import HeaderName from "./buildingBlocks/baseBlocks/HeaderName";
 
 class Header extends Component {
   render() {

@@ -9,7 +9,7 @@ class SectionTitle extends Component {
         <Typography variant="h6" color="primary">
           {this.props.title}
         </Typography>
-        <Divider />
+        <Divider style={{ width: "-moz-available" }} />
       </>
     );
   }

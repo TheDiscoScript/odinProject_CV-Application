@@ -7,6 +7,11 @@ class NormalText extends Component {
       <>
         <Typography style={{ padding: "5px" }} variant="body1">
           {this.props.text}
+          {this.props.comma}
+          {this.props.city}
+          {this.props.degree}
+          {this.props.in}
+          {this.props.subject}
         </Typography>
       </>
     );

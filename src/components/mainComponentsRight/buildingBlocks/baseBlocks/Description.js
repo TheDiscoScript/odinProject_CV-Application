@@ -9,7 +9,7 @@ class Description extends Component {
           variant="body1"
           style={{ fontSize: "1rem", fontStyle: "italic" }}
         >
-          Description Text
+          {this.props.text}
         </Typography>
       </>
     );

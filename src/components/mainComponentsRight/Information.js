@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import SectionTitle from "./buildingBlocks/SectionTitle";
-import FromTo from "./buildingBlocks/FromTo";
-import BoldText from "./buildingBlocks/BoldText";
-import Description from "./buildingBlocks/Description";
-import NormalText from "./buildingBlocks/NormalText";
+import TitleAndDescription from "./buildingBlocks/TitleAndDescription";
+import Experience from "./buildingBlocks/Experience";
+import Education from "./buildingBlocks/Education";
+import Skills from "./buildingBlocks/Skills";
 
 class Information extends Component {
   render() {
     return (
-      <div style={{ gridArea: "main" }}>
-        <SectionTitle />
-        <FromTo />
-        <BoldText />
-        <NormalText />
-        <Description />
+      <div style={{ gridArea: "main", padding: "20px" }}>
+        <TitleAndDescription />
+        <Experience />
+        <Education />
+        <Skills />
       </div>
     );
   }
