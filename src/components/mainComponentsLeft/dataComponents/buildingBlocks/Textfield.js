@@ -14,6 +14,7 @@ class CustomTextField extends Component {
           variant="outlined"
           style={{ width: "100%", margin: "5px" }}
           value={this.props.value}
+          onChange={this.props.handlePersonalInfoChange}
         />
       </Grid>
     );

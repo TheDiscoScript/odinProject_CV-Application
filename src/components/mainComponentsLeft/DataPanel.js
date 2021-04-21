@@ -10,6 +10,8 @@ class DataPanel extends Component {
           work={this.props.work}
           education={this.props.education}
           skills={this.props.skills}
+          handlePersonalInfoChange={this.props.handlePersonalInfoChange}
+          handlePhone={this.props.handlePhone}
         />
       </div>
     );

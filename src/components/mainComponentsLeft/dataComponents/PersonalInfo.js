@@ -33,21 +33,33 @@ class PersonalInfo extends Component {
         <Text
           label={datas.labels.Name}
           value={this.props.personalInfo.firstName}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("firstName", e)
+          }
         />
         <Text
           label={datas.labels.LastName}
           value={this.props.personalInfo.lastName}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("lastName", e)
+          }
         />
         <Text
           label={datas.labels.Email}
           placeholder={datas.placeholder.Email}
           type={datas.type.Email}
           value={this.props.personalInfo.email}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("email", e)
+          }
         />
         <Text
           label={datas.labels.Adress}
           placeholder={datas.placeholder.Adress}
           value={this.props.personalInfo.adress}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("adress", e)
+          }
         />
         <Grid item xs={12} sm={6} md={12} lg={6}>
           <PhoneField
@@ -56,6 +68,7 @@ class PersonalInfo extends Component {
             label="Phone Number"
             defaultCountry={"cz"}
             value={this.props.personalInfo.phoneNumber}
+            onChange={(e) => this.props.handlePhone("phoneNumber", e)}
           />
         </Grid>
         <Text
@@ -65,14 +78,23 @@ class PersonalInfo extends Component {
         <Text
           label={datas.labels.GitHub}
           value={this.props.personalInfo.gitHub}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("gitHub", e)
+          }
         />
         <Text
           label={datas.labels.LinkedIn}
           value={this.props.personalInfo.linkedIn}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("linkedIn", e)
+          }
         />
         <CustomTextField
           placeholder={datas.placeholder.Description}
           value={this.props.personalInfo.description}
+          handlePersonalInfoChange={(e) =>
+            this.props.handlePersonalInfoChange("description", e)
+          }
         />
       </Grid>
     );

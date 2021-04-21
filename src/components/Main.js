@@ -60,7 +60,25 @@ class Main extends Component {
         },
       ],
     };
+    this.handlePersonalInfoChange = this.handlePersonalInfoChange.bind(this);
   }
+
+  handlePersonalInfoChange = (input, event) => {
+    const personalInfoCopy = this.state.personalInfo;
+    personalInfoCopy[input] = event.target.value;
+    this.setState({
+      personalInfo: personalInfoCopy,
+    });
+  };
+
+  handlePhoneInfoChange = (input, event) => {
+    const personalInfoCopy = this.state.personalInfo;
+    personalInfoCopy[input] = event;
+    this.setState({
+      personalInfo: personalInfoCopy,
+    });
+  };
+
   render() {
     const { classes } = this.props;
     return (
@@ -76,6 +94,8 @@ class Main extends Component {
                 work={this.state.experience[0]}
                 education={this.state.education[0]}
                 skills={this.state.skills[0]}
+                handlePersonalInfoChange={this.handlePersonalInfoChange}
+                handlePhone={this.handlePhoneInfoChange}
               />
             </Paper>
           </Grid>
