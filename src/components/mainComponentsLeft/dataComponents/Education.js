@@ -28,18 +28,33 @@ class Education extends Component {
           <Text
             label={datas.labels.Name}
             value={this.props.education.university}
+            onChange={(e) => this.props.handleEducationChange("university", e)}
           />
-          <Text label={datas.labels.City} value={this.props.education.city} />
+          <Text
+            label={datas.labels.City}
+            value={this.props.education.city}
+            onChange={(e) => this.props.handleEducationChange("city", e)}
+          />
           <Text
             label={datas.labels.Degree}
             value={this.props.education.degree}
+            onChange={(e) => this.props.handleEducationChange("degree", e)}
           />
           <Text
             label={datas.labels.Subject}
             value={this.props.education.subject}
+            onChange={(e) => this.props.handleEducationChange("subject", e)}
           />
-          <Date label={datas.labels.From} value={this.props.education.from} />
-          <Date label={datas.labels.To} value={this.props.education.to} />
+          <Date
+            label={datas.labels.From}
+            value={this.props.education.from}
+            onChange={(e) => this.props.handleEducationChange("from", e)}
+          />
+          <Date
+            label={datas.labels.To}
+            value={this.props.education.to}
+            onChange={(e) => this.props.handleEducationChange("to", e)}
+          />
           <Grid
             itemv
             xs={12}
@@ -57,6 +72,7 @@ class Education extends Component {
             <FormControlLabel
               control={<Switch name="checkedB" color="primary" />}
               label="Till now"
+              disabled
             />
           </Grid>
           <Buttons />

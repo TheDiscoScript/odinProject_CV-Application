@@ -14,9 +14,18 @@ class CVData extends Component {
           handlePersonalInfoChange={this.props.handlePersonalInfoChange}
           handlePhone={this.props.handlePhone}
         />
-        <Experience work={this.props.work} />
-        <Education education={this.props.education} />
-        <Skills skills={this.props.skills} />
+        <Experience
+          experience={this.props.experience}
+          handleExperienceChange={this.props.handleExperienceChange}
+        />
+        <Education
+          education={this.props.education}
+          handleEducationChange={this.props.handleEducationChange}
+        />
+        <Skills
+          skills={this.props.skills}
+          handleSkillsChange={this.props.handleSkillsChange}
+        />
         <Buttons />
       </>
     );

@@ -62,7 +62,7 @@ class Main extends Component {
     };
     this.handlePersonalInfoChange = this.handlePersonalInfoChange.bind(this);
   }
-
+  //handleChangingSection
   handlePersonalInfoChange = (input, event) => {
     const personalInfoCopy = this.state.personalInfo;
     personalInfoCopy[input] = event.target.value;
@@ -73,9 +73,42 @@ class Main extends Component {
 
   handlePhoneInfoChange = (input, event) => {
     const personalInfoCopy = this.state.personalInfo;
-    personalInfoCopy[input] = event;
+    personalInfoCopy[input] = event; //wtf is this ????? IDK
     this.setState({
       personalInfo: personalInfoCopy,
+    });
+  };
+
+  //id - programm is looking through array for specific object with ID
+  /*handleExperienceChange = (input, id, event) => {
+    const experienceCopy = this.state.experience;
+    const experienceObject = experienceCopy.find((object) => object.id === id);
+    experienceObject[input] = event.target.value;
+    this.setState({
+      experienceCopy: experienceObject,
+    });
+  };*/
+  handleExperienceChange = (input, event) => {
+    const experienceCopy = this.state.experience;
+    experienceCopy[input] = event.target.value;
+    this.setState({
+      experience: experienceCopy,
+    });
+  };
+
+  handleEducationChange = (input, event) => {
+    const educationCopy = this.state.education;
+    educationCopy[input] = event.target.value;
+    this.setState({
+      education: educationCopy,
+    });
+  };
+
+  handleSkillsChange = (input, event) => {
+    const skillsCopy = this.state.skills;
+    skillsCopy[input] = event.target.value;
+    this.setState({
+      skills: skillsCopy,
     });
   };
 
@@ -91,11 +124,14 @@ class Main extends Component {
             <Paper className={classes.paper}>
               <DataPanel
                 personalInfo={this.state.personalInfo}
-                work={this.state.experience[0]}
-                education={this.state.education[0]}
-                skills={this.state.skills[0]}
+                experience={this.state.experience}
+                education={this.state.education}
+                skills={this.state.skills}
                 handlePersonalInfoChange={this.handlePersonalInfoChange}
                 handlePhone={this.handlePhoneInfoChange}
+                handleExperienceChange={this.handleExperienceChange}
+                handleEducationChange={this.handleEducationChange}
+                handleSkillsChange={this.handleSkillsChange}
               />
             </Paper>
           </Grid>
@@ -123,9 +159,9 @@ class Main extends Component {
             >
               <PreviewPanel
                 personalInfo={this.state.personalInfo}
-                work={this.state.experience[0]}
-                education={this.state.education[0]}
-                skills={this.state.skills[0]}
+                work={this.state.experience}
+                education={this.state.education}
+                skills={this.state.skills}
               />
             </Paper>
           </Grid>

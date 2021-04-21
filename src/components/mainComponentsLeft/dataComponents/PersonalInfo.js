@@ -22,6 +22,8 @@ class PersonalInfo extends Component {
         Email: "example@example.com",
         Adress: "Country, City",
         Description: "Who are you?",
+        GitHub: "github.com/example",
+        LinkedIn: "linedin.com/in/example",
       },
       type: {
         Email: "email",
@@ -33,33 +35,25 @@ class PersonalInfo extends Component {
         <Text
           label={datas.labels.Name}
           value={this.props.personalInfo.firstName}
-          handlePersonalInfoChange={(e) =>
-            this.props.handlePersonalInfoChange("firstName", e)
-          }
+          onChange={(e) => this.props.handlePersonalInfoChange("firstName", e)}
         />
         <Text
           label={datas.labels.LastName}
           value={this.props.personalInfo.lastName}
-          handlePersonalInfoChange={(e) =>
-            this.props.handlePersonalInfoChange("lastName", e)
-          }
+          onChange={(e) => this.props.handlePersonalInfoChange("lastName", e)}
         />
         <Text
           label={datas.labels.Email}
           placeholder={datas.placeholder.Email}
           type={datas.type.Email}
           value={this.props.personalInfo.email}
-          handlePersonalInfoChange={(e) =>
-            this.props.handlePersonalInfoChange("email", e)
-          }
+          onChange={(e) => this.props.handlePersonalInfoChange("email", e)}
         />
         <Text
           label={datas.labels.Adress}
           placeholder={datas.placeholder.Adress}
           value={this.props.personalInfo.adress}
-          handlePersonalInfoChange={(e) =>
-            this.props.handlePersonalInfoChange("adress", e)
-          }
+          onChange={(e) => this.props.handlePersonalInfoChange("adress", e)}
         />
         <Grid item xs={12} sm={6} md={12} lg={6}>
           <PhoneField
@@ -74,20 +68,19 @@ class PersonalInfo extends Component {
         <Text
           label={datas.labels.Photo}
           value={this.props.personalInfo.photo}
+          disabled
         />
         <Text
           label={datas.labels.GitHub}
+          placeholder={datas.placeholder.GitHub}
           value={this.props.personalInfo.gitHub}
-          handlePersonalInfoChange={(e) =>
-            this.props.handlePersonalInfoChange("gitHub", e)
-          }
+          onChange={(e) => this.props.handlePersonalInfoChange("gitHub", e)}
         />
         <Text
           label={datas.labels.LinkedIn}
+          placeholder={datas.placeholder.LinkedIn}
           value={this.props.personalInfo.linkedIn}
-          handlePersonalInfoChange={(e) =>
-            this.props.handlePersonalInfoChange("linkedIn", e)
-          }
+          onChange={(e) => this.props.handlePersonalInfoChange("linkedIn", e)}
         />
         <CustomTextField
           placeholder={datas.placeholder.Description}

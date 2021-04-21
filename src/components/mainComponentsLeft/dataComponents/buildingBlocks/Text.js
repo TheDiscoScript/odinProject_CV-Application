@@ -22,7 +22,7 @@ class Text extends Component {
           placeholder={this.props.placeholder}
           type={this.props.type}
           value={this.props.value}
-          onChange={this.props.handlePersonalInfoChange}
+          onChange={this.props.onChange}
         />
       </Grid>
     );

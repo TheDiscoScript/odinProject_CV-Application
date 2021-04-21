@@ -28,15 +28,31 @@ class Experience extends Component {
           <Title title={"Experience"} />
           <Text
             label={datas.labels.Position}
-            value={this.props.work.position}
+            value={this.props.experience.position}
+            onChange={(e) => this.props.handleExperienceChange("position", e)}
           />
           <Text
             label={datas.labels.Company}
-            value={this.props.work.companyName}
+            value={this.props.experience.companyName}
+            onChange={(e) =>
+              this.props.handleExperienceChange("companyName", e)
+            }
           />
-          <Text label={datas.labels.City} value={this.props.work.city} />
-          <Date label={datas.labels.From} value={this.props.work.from} />
-          <Date label={datas.labels.To} value={this.props.work.to} />
+          <Text
+            label={datas.labels.City}
+            value={this.props.experience.city}
+            onChange={(e) => this.props.handleExperienceChange("city", e)}
+          />
+          <Date
+            label={datas.labels.From}
+            value={this.props.experience.from}
+            onChange={(e) => this.props.handleExperienceChange("from", e)}
+          />
+          <Date
+            label={datas.labels.To}
+            value={this.props.experience.to}
+            onChange={(e) => this.props.handleExperienceChange("to", e)}
+          />
           <Grid
             container
             xs={12}
@@ -54,6 +70,7 @@ class Experience extends Component {
             <FormControlLabel
               control={<Switch name="checkedB" color="primary" />}
               label="Till now"
+              disabled
             />
           </Grid>
           <Buttons />

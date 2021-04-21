@@ -16,6 +16,7 @@ class Date extends Component {
             shrink: true,
           }}
           value={this.props.value}
+          onChange={this.props.onChange}
         />
       </Grid>
     );

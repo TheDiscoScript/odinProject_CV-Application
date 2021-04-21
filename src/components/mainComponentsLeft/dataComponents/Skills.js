@@ -14,6 +14,7 @@ class Skills extends Component {
           <RatingField
             skill={this.props.skills.skill}
             star={this.props.skills.value}
+            handleSkillsChange={this.props.handleSkillsChange}
           />
         </Grid>
         <Grid
