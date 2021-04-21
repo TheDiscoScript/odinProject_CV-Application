@@ -24,6 +24,7 @@ class RatingField extends Component {
             label="Skill"
             variant="standard"
             placeholder="Are you good at... React?"
+            value={this.props.skill}
           />
         </Grid>
         <Grid item>
@@ -32,6 +33,7 @@ class RatingField extends Component {
             defaultValue={0}
             precision={0.5}
             emptyIcon={<StarBorderIcon fontSize="inherit" />}
+            value={this.props.star}
           />
         </Grid>
         <Grid item>

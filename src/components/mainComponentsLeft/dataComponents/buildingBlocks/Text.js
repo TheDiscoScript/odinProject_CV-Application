@@ -21,6 +21,7 @@ class Text extends Component {
           label={this.props.label}
           placeholder={this.props.placeholder}
           type={this.props.type}
+          value={this.props.value}
         />
       </Grid>
     );

@@ -5,7 +5,12 @@ class DataPanel extends Component {
   render() {
     return (
       <div>
-        <CVData />
+        <CVData
+          personalInfo={this.props.personalInfo}
+          work={this.props.work}
+          education={this.props.education}
+          skills={this.props.skills}
+        />
       </div>
     );
   }

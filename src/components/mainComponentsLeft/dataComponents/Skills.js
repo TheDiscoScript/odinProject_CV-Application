@@ -11,7 +11,10 @@ class Skills extends Component {
       <Grid container spacing={1}>
         <Title title={"Skills"} />
         <Grid container>
-          <RatingField />
+          <RatingField
+            skill={this.props.skills.skill}
+            star={this.props.skills.value}
+          />
         </Grid>
         <Grid
           item

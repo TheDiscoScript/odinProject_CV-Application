@@ -26,11 +26,17 @@ class Experience extends Component {
       <Grid container>
         <Grid container spacing={1}>
           <Title title={"Experience"} />
-          <Text label={datas.labels.Position} />
-          <Text label={datas.labels.Company} />
-          <Text label={datas.labels.City} />
-          <Date label={datas.labels.From} />
-          <Date label={datas.labels.To} />
+          <Text
+            label={datas.labels.Position}
+            value={this.props.work.position}
+          />
+          <Text
+            label={datas.labels.Company}
+            value={this.props.work.companyName}
+          />
+          <Text label={datas.labels.City} value={this.props.work.city} />
+          <Date label={datas.labels.From} value={this.props.work.from} />
+          <Date label={datas.labels.To} value={this.props.work.to} />
           <Grid
             container
             xs={12}

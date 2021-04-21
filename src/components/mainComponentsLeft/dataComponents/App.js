@@ -9,10 +9,10 @@ class CVData extends Component {
   render() {
     return (
       <>
-        <PersonalInfo />
-        <Experience />
-        <Education />
-        <Skills />
+        <PersonalInfo personalInfo={this.props.personalInfo} />
+        <Experience work={this.props.work} />
+        <Education education={this.props.education} />
+        <Skills skills={this.props.skills} />
         <Buttons />
       </>
     );

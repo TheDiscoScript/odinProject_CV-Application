@@ -15,6 +15,7 @@ class Date extends Component {
           InputLabelProps={{
             shrink: true,
           }}
+          value={this.props.value}
         />
       </Grid>
     );

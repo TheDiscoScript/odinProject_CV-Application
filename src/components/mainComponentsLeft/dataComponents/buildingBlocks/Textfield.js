@@ -13,6 +13,7 @@ class CustomTextField extends Component {
           placeholder={this.props.placeholder}
           variant="outlined"
           style={{ width: "100%", margin: "5px" }}
+          value={this.props.value}
         />
       </Grid>
     );

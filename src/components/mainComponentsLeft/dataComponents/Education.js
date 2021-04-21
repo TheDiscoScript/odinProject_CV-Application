@@ -25,14 +25,23 @@ class Education extends Component {
       <Grid container>
         <Grid container spacing={1}>
           <Title title={"Education"} />
-          <Text label={datas.labels.Name} />
-          <Text label={datas.labels.City} />
-          <Text label={datas.labels.Degree} />
-          <Text label={datas.labels.Subject} />
-          <Date label={datas.labels.From} />
-          <Date label={datas.labels.To} />
+          <Text
+            label={datas.labels.Name}
+            value={this.props.education.university}
+          />
+          <Text label={datas.labels.City} value={this.props.education.city} />
+          <Text
+            label={datas.labels.Degree}
+            value={this.props.education.degree}
+          />
+          <Text
+            label={datas.labels.Subject}
+            value={this.props.education.subject}
+          />
+          <Date label={datas.labels.From} value={this.props.education.from} />
+          <Date label={datas.labels.To} value={this.props.education.to} />
           <Grid
-            item
+            itemv
             xs={12}
             sm={12}
             md={12}
