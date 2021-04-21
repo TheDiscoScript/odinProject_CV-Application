@@ -12,7 +12,7 @@ class Header extends Component {
           color: "white",
         }}
       >
-        <HeaderName />
+        <HeaderName nameLastName={this.props.nameLastName} />
       </div>
     );
   }

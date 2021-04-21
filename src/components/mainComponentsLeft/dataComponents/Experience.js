@@ -3,7 +3,6 @@ import Title from "./buildingBlocks/Title";
 import Text from "./buildingBlocks/Text";
 import Grid from "@material-ui/core/Grid";
 import Date from "./buildingBlocks/Date";
-import CustomTextField from "./buildingBlocks/Textfield";
 import Buttons from "./buildingBlocks/Button";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -51,7 +50,6 @@ class Experience extends Component {
               label="Till now"
             />
           </Grid>
-          <CustomTextField placeholder={datas.placeholder.Description} />
           <Buttons />
         </Grid>
         <ButtonAdd />

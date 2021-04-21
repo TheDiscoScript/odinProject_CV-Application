@@ -18,9 +18,14 @@ class PreviewPanel extends Component {
           gridTemplateAreas: `"header header" "main sidebar"`,
         }}
       >
-        <Header />
-        <Information />
-        <Sidebar />
+        <Header nameLastName={this.props.personalInfo} />
+        <Information
+          personalDescription={this.props.personalInfo}
+          work={this.props.work}
+          education={this.props.education}
+          skills={this.props.skills}
+        />
+        <Sidebar personalInformation={this.props.personalInfo} />
       </div>
     );
   }

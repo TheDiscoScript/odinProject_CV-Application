@@ -9,12 +9,6 @@ class Skills extends Component {
       title: {
         Title: "Skills",
       },
-      skill: {
-        React: "React",
-      },
-      value: {
-        ReactValue: 2,
-      },
     };
     return (
       <Box
@@ -28,8 +22,8 @@ class Skills extends Component {
         <SectionTitle title={datas.title.Title} />
         <Box>
           <TextAndRating
-            skill={datas.skill.React}
-            star={datas.value.ReactValue}
+            skill={this.props.skills.skill}
+            star={this.props.skills.value}
           />
         </Box>
       </Box>

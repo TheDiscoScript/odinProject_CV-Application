@@ -8,10 +8,12 @@ class Information extends Component {
   render() {
     return (
       <div style={{ gridArea: "main", padding: "20px" }}>
-        <TitleAndDescription />
-        <Experience />
-        <Education />
-        <Skills />
+        <TitleAndDescription
+          personalDescription={this.props.personalDescription}
+        />
+        <Experience work={this.props.work} />
+        <Education education={this.props.education} />
+        <Skills skills={this.props.skills} />
       </div>
     );
   }

@@ -12,17 +12,8 @@ class Education extends Component {
       title: {
         Title: "Education",
       },
-      date: {
-        From: "1.8.2017",
-        To: "now",
-      },
-      University: {
-        Name: "Masarykova Univerzita",
-        City: "Brno",
-        Degree: "Master's degree",
-        Subject: "Law",
+      text: {
         In: " in ",
-        Comma: ",",
       },
     };
     return (
@@ -44,19 +35,22 @@ class Education extends Component {
           }}
         >
           <Box>
-            <FromTo from={datas.date.From} to={datas.date.To} />
+            <FromTo
+              from={this.props.education.from}
+              to={this.props.education.to}
+            />
           </Box>
           <Divider orientation="vertical" flexItem />
           <Box style={{ padding: "10px" }}>
             <SizedBoldAndNormal
-              uni={datas.University.Name}
-              city={datas.University.City}
+              uni={this.props.education.university}
+              city={this.props.education.city}
             />
             <Box style={{ display: "flex", flexDirection: "row" }}>
               <NormalText
-                degree={datas.University.Degree}
-                in={datas.University.In}
-                subject={datas.University.Subject}
+                degree={this.props.education.degree}
+                in={datas.text.In}
+                subject={this.props.education.subject}
               />
             </Box>
           </Box>

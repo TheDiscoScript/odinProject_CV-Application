@@ -15,9 +15,9 @@ class HeaderName extends Component {
         }}
       >
         <Typography variant="h2" style={{ paddingRight: "25px" }}>
-          Name
+          {this.props.nameLastName.firstName}
         </Typography>
-        <Typography variant="h2">Last Name</Typography>
+        <Typography variant="h2">{this.props.nameLastName.lastName}</Typography>
       </Box>
     );
   }

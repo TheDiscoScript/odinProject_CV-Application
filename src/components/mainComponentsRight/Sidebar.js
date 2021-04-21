@@ -14,9 +14,6 @@ class Sidebar extends Component {
         LinkedIn: "LinkedIn",
         Adress: "Adress",
       },
-      testing: {
-        Text: "xxxx xxxx",
-      },
     };
     return (
       <div
@@ -32,11 +29,26 @@ class Sidebar extends Component {
         />
 
         <SectionTitle title={datas.labels.Title} />
-        <BoldAndText title={datas.labels.GitHub} text={datas.testing.Text} />
-        <BoldAndText title={datas.labels.LinkedIn} text={datas.testing.Text} />
-        <BoldAndText title={datas.labels.Email} text={datas.testing.Text} />
-        <BoldAndText title={datas.labels.Adress} text={datas.testing.Text} />
-        <BoldAndText title={datas.labels.Number} text={datas.testing.Text} />
+        <BoldAndText
+          title={datas.labels.GitHub}
+          text={this.props.personalInformation.gitHub}
+        />
+        <BoldAndText
+          title={datas.labels.LinkedIn}
+          text={this.props.personalInformation.linkedIn}
+        />
+        <BoldAndText
+          title={datas.labels.Email}
+          text={this.props.personalInformation.email}
+        />
+        <BoldAndText
+          title={datas.labels.Adress}
+          text={this.props.personalInformation.adress}
+        />
+        <BoldAndText
+          title={datas.labels.Number}
+          text={this.props.personalInformation.phoneNumber}
+        />
       </div>
     );
   }

@@ -13,16 +13,7 @@ class Experience extends Component {
         Title: "Experience",
       },
       text: {
-        Company: "IDK yet,s.r.o.",
-        City: "Brno",
         Comma: ", ",
-      },
-      date: {
-        From: "18.5.1998",
-        To: "18.5.2021",
-      },
-      position: {
-        Position: "React Junior Dev",
       },
     };
     return (
@@ -44,18 +35,18 @@ class Experience extends Component {
           }}
         >
           <Box>
-            <FromTo from={datas.date.From} to={datas.date.To} />
+            <FromTo from={this.props.work.from} to={this.props.work.to} />
           </Box>
           <Divider orientation="vertical" flexItem />
           <Box style={{ padding: "10px" }}>
-            <Box>
-              <BoldText title={datas.position.Position} />
+            <Box style={{ textAlign: "left" }}>
+              <BoldText title={this.props.work.position} />
             </Box>
             <Box style={{ display: "flex", flexDirection: "row" }}>
               <NormalText
-                text={datas.text.Company}
+                text={this.props.work.companyName}
                 comma={datas.text.Comma}
-                city={datas.text.City}
+                city={this.props.work.city}
               />
             </Box>
           </Box>
