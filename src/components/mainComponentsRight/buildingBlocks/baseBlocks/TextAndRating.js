@@ -19,9 +19,12 @@ class TextAndRating extends Component {
           {this.props.skill}
         </Typography>
         <Rating
+          name="unique-rating"
+          defaultValue={0}
           style={{ paddingLeft: "15px" }}
           value={this.props.star}
           readOnly
+          precision={0.5}
         />
       </Box>
     );

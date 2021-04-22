@@ -30,10 +30,11 @@ class RatingField extends Component {
         </Grid>
         <Grid item>
           <Rating
-            name="customized-empty"
+            name="uniqu-rating"
             defaultValue={0}
             precision={0.5}
             emptyIcon={<StarBorderIcon fontSize="inherit" />}
+            controlled
             value={this.props.star}
             onChange={(e) => this.props.handleSkillsChange("value", e)}
           />

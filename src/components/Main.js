@@ -56,7 +56,7 @@ class Main extends Component {
         {
           id: uuidv4(),
           skill: "",
-          value: null,
+          value: "",
         },
       ],
     };
@@ -107,9 +107,12 @@ class Main extends Component {
   handleSkillsChange = (input, event) => {
     const skillsCopy = this.state.skills;
     skillsCopy[input] = event.target.value;
-    this.setState({
-      skills: skillsCopy,
-    });
+    this.setState(
+      {
+        skills: skillsCopy,
+      },
+      () => console.log(this.state.skills)
+    );
   };
 
   render() {
