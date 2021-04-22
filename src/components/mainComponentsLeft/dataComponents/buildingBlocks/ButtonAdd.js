@@ -20,7 +20,11 @@ class ButtonAdd extends Component {
           variant="contained"
           aria-label="contained primary button group"
         >
-          <Button color="primary" style={{ width: "100%" }}>
+          <Button
+            color="primary"
+            style={{ width: "100%" }}
+            onClick={this.props.onClick}
+          >
             <AddIcon />
           </Button>
         </ButtonGroup>

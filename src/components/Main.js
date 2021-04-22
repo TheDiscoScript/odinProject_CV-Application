@@ -61,6 +61,7 @@ class Main extends Component {
       ],
     };
     this.handlePersonalInfoChange = this.handlePersonalInfoChange.bind(this);
+    this.handleExperienceAdd = this.handleExperienceAdd.bind(this);
   }
   //handleChangingSection
   handlePersonalInfoChange = (input, event) => {
@@ -91,11 +92,38 @@ class Main extends Component {
   handleExperienceChange = (input, event) => {
     const experienceCopy = this.state.experience;
     experienceCopy[input] = event.target.value;
-    this.setState({
-      experience: experienceCopy,
-    });
+    this.setState(
+      {
+        experience: experienceCopy,
+      },
+      () => console.log(this.state.experience)
+    );
   };
 
+  handleExperienceAdd = (e) => {
+    alert("clicked");
+    /* this.setState(
+      (prevState) => ({
+        experience: [
+          {
+            id: uuidv4(),
+            position: "sgv",
+            companyName: "",
+            city: "",
+            from: "",
+            to: "",
+          },
+          ...prevState.experience,
+        ],
+      }),
+      () => console.log(this.state),
+      () => console.log(this.state.skills)
+    );*/
+  };
+
+  //
+  //
+  //TODO later
   handleEducationChange = (input, event) => {
     const educationCopy = this.state.education;
     educationCopy[input] = event.target.value;
@@ -133,6 +161,7 @@ class Main extends Component {
                 handlePersonalInfoChange={this.handlePersonalInfoChange}
                 handlePhone={this.handlePhoneInfoChange}
                 handleExperienceChange={this.handleExperienceChange}
+                handleExperienceAdd={this.handleExperienceAdd}
                 handleEducationChange={this.handleEducationChange}
                 handleSkillsChange={this.handleSkillsChange}
               />

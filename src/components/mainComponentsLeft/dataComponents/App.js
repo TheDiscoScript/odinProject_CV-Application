@@ -17,6 +17,7 @@ class CVData extends Component {
         <Experience
           experience={this.props.experience}
           handleExperienceChange={this.props.handleExperienceChange}
+          handleExperienceAdd={this.props.handleExperienceAdd}
         />
         <Education
           education={this.props.education}

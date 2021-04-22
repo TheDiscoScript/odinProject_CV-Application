@@ -75,7 +75,7 @@ class Experience extends Component {
           </Grid>
           <Buttons />
         </Grid>
-        <ButtonAdd />
+        <ButtonAdd onClick={(e) => this.props.handleExperienceAdd("", e)} />
       </Grid>
     );
   }
