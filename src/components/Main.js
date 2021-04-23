@@ -21,6 +21,7 @@ class Main extends Component {
     super(props);
     this.state = {
       personalInfo: {
+        //no ID needed as there will be only 1 personalInfo
         firstName: "",
         lastName: "",
         email: "",
@@ -31,16 +32,7 @@ class Main extends Component {
         linkedIn: "",
         description: "",
       },
-      experience: [
-        {
-          id: uuidv4(),
-          position: "",
-          companyName: "",
-          city: "",
-          from: "",
-          to: "",
-        },
-      ],
+      experience: [],
       education: [
         {
           id: uuidv4(),
@@ -64,6 +56,7 @@ class Main extends Component {
     this.handleExperienceAdd = this.handleExperienceAdd.bind(this);
   }
   //handleChangingSection
+  //handle personalInfo
   handlePersonalInfoChange = (input, event) => {
     const personalInfoCopy = this.state.personalInfo;
     personalInfoCopy[input] = event.target.value;
@@ -79,51 +72,37 @@ class Main extends Component {
       personalInfo: personalInfoCopy,
     });
   };
-
+  //handle work experience
   //id - programm is looking through array for specific object with ID
-  /*handleExperienceChange = (input, id, event) => {
+  handleExperienceChange = (input, id, event) => {
     const experienceCopy = this.state.experience;
     const experienceObject = experienceCopy.find((object) => object.id === id);
     experienceObject[input] = event.target.value;
     this.setState({
       experienceCopy: experienceObject,
     });
-  };*/
-  handleExperienceChange = (input, event) => {
-    const experienceCopy = this.state.experience;
-    experienceCopy[input] = event.target.value;
-    this.setState(
-      {
-        experience: experienceCopy,
-      },
-      () => console.log(this.state.experience)
-    );
   };
 
   handleExperienceAdd = (e) => {
-    alert("clicked");
-    /* this.setState(
-      (prevState) => ({
-        experience: [
-          {
-            id: uuidv4(),
-            position: "sgv",
-            companyName: "",
-            city: "",
-            from: "",
-            to: "",
-          },
-          ...prevState.experience,
-        ],
-      }),
-      () => console.log(this.state),
-      () => console.log(this.state.skills)
-    );*/
+    this.setState((prevState) => ({
+      experience: [
+        ...prevState.experience,
+        {
+          id: uuidv4(),
+          position: "",
+          companyName: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
   };
+  handleExperienceRemove = (e) => {};
 
   //
   //
-  //TODO later
+  //handle education
   handleEducationChange = (input, event) => {
     const educationCopy = this.state.education;
     educationCopy[input] = event.target.value;
@@ -131,7 +110,7 @@ class Main extends Component {
       education: educationCopy,
     });
   };
-
+  //handle skills
   handleSkillsChange = (input, event) => {
     const skillsCopy = this.state.skills;
     skillsCopy[input] = event.target.value;
@@ -158,10 +137,13 @@ class Main extends Component {
                 experience={this.state.experience}
                 education={this.state.education}
                 skills={this.state.skills}
+                //
                 handlePersonalInfoChange={this.handlePersonalInfoChange}
                 handlePhone={this.handlePhoneInfoChange}
+                //
                 handleExperienceChange={this.handleExperienceChange}
                 handleExperienceAdd={this.handleExperienceAdd}
+                //
                 handleEducationChange={this.handleEducationChange}
                 handleSkillsChange={this.handleSkillsChange}
               />

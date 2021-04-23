@@ -16,6 +16,37 @@ class Experience extends Component {
         Comma: ", ",
       },
     };
+
+    const workCopy = this.props.work.slice();
+    const workObjects = workCopy.map((object) => (
+      <Box
+        key={object.id}
+        style={{
+          display: "flex",
+          flexDirection: "rows",
+          justifyContent: "space-around",
+          alignItems: "flex-start",
+        }}
+      >
+        <Box>
+          <FromTo from={object.from} to={object.to} />
+        </Box>
+        <Divider orientation="vertical" flexItem />
+        <Box style={{ padding: "10px" }}>
+          <Box style={{ textAlign: "left" }}>
+            <BoldText title={object.position} />
+          </Box>
+          <Box style={{ display: "flex", flexDirection: "row" }}>
+            <NormalText
+              text={object.companyName}
+              comma={datas.text.Comma}
+              city={object.city}
+            />
+          </Box>
+        </Box>
+      </Box>
+    ));
+
     return (
       <Box
         style={{
@@ -26,31 +57,7 @@ class Experience extends Component {
         }}
       >
         <SectionTitle title={datas.title.Title}></SectionTitle>
-        <Box
-          style={{
-            display: "flex",
-            flexDirection: "rows",
-            justifyContent: "space-around",
-            alignItems: "flex-start",
-          }}
-        >
-          <Box>
-            <FromTo from={this.props.work.from} to={this.props.work.to} />
-          </Box>
-          <Divider orientation="vertical" flexItem />
-          <Box style={{ padding: "10px" }}>
-            <Box style={{ textAlign: "left" }}>
-              <BoldText title={this.props.work.position} />
-            </Box>
-            <Box style={{ display: "flex", flexDirection: "row" }}>
-              <NormalText
-                text={this.props.work.companyName}
-                comma={datas.text.Comma}
-                city={this.props.work.city}
-              />
-            </Box>
-          </Box>
-        </Box>
+        {workObjects}
       </Box>
     );
   }

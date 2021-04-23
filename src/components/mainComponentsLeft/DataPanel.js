@@ -10,10 +10,13 @@ class DataPanel extends Component {
           experience={this.props.experience}
           education={this.props.education}
           skills={this.props.skills}
+          //
           handlePersonalInfoChange={this.props.handlePersonalInfoChange}
           handlePhone={this.props.handlePhone}
+          //
           handleExperienceChange={this.props.handleExperienceChange}
           handleExperienceAdd={this.props.handleExperienceAdd}
+          //
           handleEducationChange={this.props.handleEducationChange}
           handleSkillsChange={this.props.handleSkillsChange}
         />

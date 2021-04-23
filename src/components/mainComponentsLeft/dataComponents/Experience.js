@@ -22,60 +22,74 @@ class Experience extends Component {
         Description: "What was your job?",
       },
     };
+    const experienceObject = this.props.experience.map((object) => (
+      <Grid container spacing={1} key={object.id}>
+        <Text
+          label={datas.labels.Position}
+          value={object.position}
+          onChange={(e) =>
+            this.props.handleExperienceChange("position", object.id, e)
+          }
+        />
+        <Text
+          label={datas.labels.Company}
+          value={object.companyName}
+          onChange={(e) =>
+            this.props.handleExperienceChange("companyName", object.id, e)
+          }
+        />
+        <Text
+          label={datas.labels.City}
+          value={object.city}
+          onChange={(e) =>
+            this.props.handleExperienceChange("city", object.id, e)
+          }
+        />
+        <Date
+          label={datas.labels.From}
+          value={object.from}
+          onChange={(e) =>
+            this.props.handleExperienceChange("from", object.id, e)
+          }
+        />
+        <Date
+          label={datas.labels.To}
+          value={object.to}
+          onChange={(e) =>
+            this.props.handleExperienceChange("to", object.id, e)
+          }
+        />
+        <Grid
+          container
+          xs={12}
+          sm={6}
+          md={12}
+          lg={6}
+          fullwidth
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            width: "100%",
+          }}
+        >
+          <FormControlLabel
+            control={<Switch name="checkedB" color="primary" />}
+            label="Till now"
+            disabled
+          />
+        </Grid>
+        <Buttons />
+      </Grid>
+    ));
+
     return (
       <Grid container>
         <Grid container spacing={1}>
           <Title title={"Experience"} />
-          <Text
-            label={datas.labels.Position}
-            value={this.props.experience.position}
-            onChange={(e) => this.props.handleExperienceChange("position", e)}
-          />
-          <Text
-            label={datas.labels.Company}
-            value={this.props.experience.companyName}
-            onChange={(e) =>
-              this.props.handleExperienceChange("companyName", e)
-            }
-          />
-          <Text
-            label={datas.labels.City}
-            value={this.props.experience.city}
-            onChange={(e) => this.props.handleExperienceChange("city", e)}
-          />
-          <Date
-            label={datas.labels.From}
-            value={this.props.experience.from}
-            onChange={(e) => this.props.handleExperienceChange("from", e)}
-          />
-          <Date
-            label={datas.labels.To}
-            value={this.props.experience.to}
-            onChange={(e) => this.props.handleExperienceChange("to", e)}
-          />
-          <Grid
-            container
-            xs={12}
-            sm={6}
-            md={12}
-            lg={6}
-            fullwidth
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              width: "100%",
-            }}
-          >
-            <FormControlLabel
-              control={<Switch name="checkedB" color="primary" />}
-              label="Till now"
-              disabled
-            />
-          </Grid>
-          <Buttons />
+          {experienceObject}
         </Grid>
-        <ButtonAdd onClick={(e) => this.props.handleExperienceAdd("", e)} />
+        <ButtonAdd onClick={(e) => this.props.handleExperienceAdd(e)} />
       </Grid>
     );
   }
