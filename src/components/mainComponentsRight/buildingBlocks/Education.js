@@ -16,6 +16,35 @@ class Education extends Component {
         In: " in ",
       },
     };
+
+    const educationCopy = this.props.education.slice();
+    const educationObject = educationCopy.map((object) => (
+      <Box
+        key={object.id}
+        style={{
+          display: "flex",
+          flexDirection: "rows",
+          justifyContent: "space-around",
+          alignItems: "flex-start",
+        }}
+      >
+        <Box>
+          <FromTo from={object.from} to={object.to} />
+        </Box>
+        <Divider orientation="vertical" flexItem />
+        <Box style={{ padding: "10px" }}>
+          <SizedBoldAndNormal uni={object.university} city={object.city} />
+          <Box style={{ display: "flex", flexDirection: "row" }}>
+            <NormalText
+              degree={object.degree}
+              in={datas.text.In}
+              subject={object.subject}
+            />
+          </Box>
+        </Box>
+      </Box>
+    ));
+
     return (
       <Box
         style={{
@@ -26,35 +55,7 @@ class Education extends Component {
         }}
       >
         <SectionTitle title={datas.title.Title}></SectionTitle>
-        <Box
-          style={{
-            display: "flex",
-            flexDirection: "rows",
-            justifyContent: "space-around",
-            alignItems: "flex-start",
-          }}
-        >
-          <Box>
-            <FromTo
-              from={this.props.education.from}
-              to={this.props.education.to}
-            />
-          </Box>
-          <Divider orientation="vertical" flexItem />
-          <Box style={{ padding: "10px" }}>
-            <SizedBoldAndNormal
-              uni={this.props.education.university}
-              city={this.props.education.city}
-            />
-            <Box style={{ display: "flex", flexDirection: "row" }}>
-              <NormalText
-                degree={this.props.education.degree}
-                in={datas.text.In}
-                subject={this.props.education.subject}
-              />
-            </Box>
-          </Box>
-        </Box>
+        {educationObject}
       </Box>
     );
   }

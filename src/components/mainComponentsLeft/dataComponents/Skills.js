@@ -7,16 +7,25 @@ import AddIcon from "@material-ui/icons/Add";
 
 class Skills extends Component {
   render() {
+    const skillsObject = this.props.skills.map((object) => (
+      <Grid container key={object.id}>
+        <RatingField
+          skill={object.skill}
+          star={object.value}
+          handleSkillsChangeSkill={(e) =>
+            this.props.handleSkillsChange("skill", object.id, e)
+          }
+          handleSkillsChangeStar={(e) =>
+            this.props.handleSkillsChange("value", object.id, e)
+          }
+        />
+      </Grid>
+    ));
+
     return (
       <Grid container spacing={1}>
         <Title title={"Skills"} />
-        <Grid container>
-          <RatingField
-            skill={this.props.skills.skill}
-            star={this.props.skills.value}
-            handleSkillsChange={this.props.handleSkillsChange}
-          />
-        </Grid>
+        {skillsObject}
         <Grid
           item
           xs={12}

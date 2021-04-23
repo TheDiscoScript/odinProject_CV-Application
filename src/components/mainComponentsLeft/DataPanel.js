@@ -16,8 +16,12 @@ class DataPanel extends Component {
           //
           handleExperienceChange={this.props.handleExperienceChange}
           handleExperienceAdd={this.props.handleExperienceAdd}
+          handleExperienceRemove={this.props.handleExperienceRemove}
           //
           handleEducationChange={this.props.handleEducationChange}
+          handleEducationAdd={this.props.handleEducationAdd}
+          handleEducationRemove={this.props.handleEducationRemove}
+          //
           handleSkillsChange={this.props.handleSkillsChange}
         />
       </div>

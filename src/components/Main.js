@@ -33,17 +33,7 @@ class Main extends Component {
         description: "",
       },
       experience: [],
-      education: [
-        {
-          id: uuidv4(),
-          university: "",
-          city: "",
-          degree: "",
-          subject: "",
-          from: "",
-          to: "",
-        },
-      ],
+      education: [],
       skills: [
         {
           id: uuidv4(),
@@ -98,29 +88,85 @@ class Main extends Component {
       ],
     }));
   };
-  handleExperienceRemove = (e) => {};
-
-  //
-  //
-  //handle education
-  handleEducationChange = (input, event) => {
-    const educationCopy = this.state.education;
-    educationCopy[input] = event.target.value;
+  handleExperienceRemove = (id) => {
+    const experienceCopy = this.state.experience;
+    const experienceCopyMinusOne = experienceCopy.filter(
+      (object) => object.id !== id
+    );
     this.setState({
-      education: educationCopy,
+      experience: experienceCopyMinusOne,
     });
   };
+
+  //handle education
+  handleEducationChange = (input, id, event) => {
+    const educationCopy = this.state.education;
+    const educationObject = educationCopy.find((object) => object.id === id);
+    educationObject[input] = event.target.value;
+    this.setState({
+      educationCopy: educationObject,
+    });
+  };
+  handleEducationAdd = (e) => {
+    this.setState((prevState) => ({
+      education: [
+        ...prevState.education,
+        {
+          id: uuidv4(),
+          university: "",
+          city: "",
+          degree: "",
+          subject: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+  handleEducationRemove = (id) => {
+    const educationCopy = this.state.education;
+    const educationCopyMinusOne = educationCopy.filter(
+      (object) => object.id !== id
+    );
+    this.setState({
+      education: educationCopyMinusOne,
+    });
+  };
+
   //handle skills
-  handleSkillsChange = (input, event) => {
+  handleSkillsChange = (input, id, event) => {
     const skillsCopy = this.state.skills;
-    skillsCopy[input] = event.target.value;
+    const skillsObject = skillsCopy.find((object) => object.id === id);
+    skillsObject[input] = event.target.value;
     this.setState(
       {
-        skills: skillsCopy,
+        skillsCopy: skillsObject,
       },
       () => console.log(this.state.skills)
     );
   };
+
+  /*
+  handleSkillsAdd=(e) =>{
+    this.setState((prevState) =>({
+      skills:[...prevState.skills,{
+         id: uuidv4(),
+          skill: "",
+          value: "",
+      }]
+    }))
+  }
+  
+  handleSkillsRemove = (id) => {
+    const skillsCopy = this.state.skills
+    const skillsCopyMinusOne = skillsCopy.filter ((object) 
+    => object.id !== id)
+    this.setState({
+      skills: skillsCopyMinusOne
+    })
+  }
+  
+  */
 
   render() {
     const { classes } = this.props;
@@ -143,8 +189,12 @@ class Main extends Component {
                 //
                 handleExperienceChange={this.handleExperienceChange}
                 handleExperienceAdd={this.handleExperienceAdd}
+                handleExperienceRemove={this.handleExperienceRemove}
                 //
                 handleEducationChange={this.handleEducationChange}
+                handleEducationAdd={this.handleEducationAdd}
+                handleEducationRemove={this.handleEducationRemove}
+                //
                 handleSkillsChange={this.handleSkillsChange}
               />
             </Paper>

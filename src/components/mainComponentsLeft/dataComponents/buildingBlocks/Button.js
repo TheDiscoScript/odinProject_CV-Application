@@ -20,7 +20,11 @@ class Buttons extends Component {
           variant="contained"
           aria-label="contained primary button group"
         >
-          <Button color="secondary" style={{ width: "100%" }}>
+          <Button
+            color="secondary"
+            onClick={this.props.onClick}
+            style={{ width: "100%" }}
+          >
             <DeleteIcon />
           </Button>
         </ButtonGroup>

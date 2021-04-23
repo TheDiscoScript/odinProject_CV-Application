@@ -79,7 +79,9 @@ class Experience extends Component {
             disabled
           />
         </Grid>
-        <Buttons />
+        <Buttons
+          onClick={(id) => this.props.handleExperienceRemove(object.id)}
+        />
       </Grid>
     ));
 

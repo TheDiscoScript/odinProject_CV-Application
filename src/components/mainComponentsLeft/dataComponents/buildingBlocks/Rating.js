@@ -25,7 +25,7 @@ class RatingField extends Component {
             variant="standard"
             placeholder="Are you good at... React?"
             value={this.props.skill}
-            onChange={(e) => this.props.handleSkillsChange("skill", e)}
+            onChange={this.props.handleSkillsChangeSkill}
           />
         </Grid>
         <Grid item>
@@ -36,7 +36,7 @@ class RatingField extends Component {
             emptyIcon={<StarBorderIcon fontSize="inherit" />}
             controlled
             value={this.props.star}
-            onChange={(e) => this.props.handleSkillsChange("value", e)}
+            onChange={this.props.handleSkillsChangeStar}
           />
         </Grid>
         <Grid item>
