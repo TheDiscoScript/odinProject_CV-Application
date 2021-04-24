@@ -22,6 +22,7 @@ class Experience extends Component {
         Description: "What was your job?",
       },
     };
+
     const experienceObject = this.props.experience.map((object) => (
       <Grid container spacing={1} key={object.id}>
         <Text
@@ -74,9 +75,17 @@ class Experience extends Component {
           }}
         >
           <FormControlLabel
-            control={<Switch name="checkedB" color="primary" />}
-            label="Till now"
-            disabled
+            control={
+              <Switch
+                name="checkedB"
+                color="primary"
+                checked={object.checked}
+                onChange={(e) =>
+                  this.props.handleExperienceToggle("checked", object.id, e)
+                }
+              />
+            }
+            label="Ongoing"
           />
         </Grid>
         <Buttons

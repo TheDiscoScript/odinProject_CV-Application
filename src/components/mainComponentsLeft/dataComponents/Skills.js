@@ -18,6 +18,7 @@ class Skills extends Component {
           handleSkillsChangeStar={(e) =>
             this.props.handleSkillsChange("value", object.id, e)
           }
+          onClick={(id) => this.props.handleSkillsRemove(object.id)}
         />
       </Grid>
     ));
@@ -34,7 +35,12 @@ class Skills extends Component {
           lg={12}
           style={{ marginTop: "15px" }}
         >
-          <Button color="primary" variant="contained" fullWidth>
+          <Button
+            onClick={(e) => this.props.handleSkillsAdd(e)}
+            color="primary"
+            variant="contained"
+            style={{ width: "100%" }}
+          >
             <AddIcon />
           </Button>
         </Grid>

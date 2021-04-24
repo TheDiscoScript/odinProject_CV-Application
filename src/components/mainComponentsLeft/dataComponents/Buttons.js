@@ -21,6 +21,7 @@ class EventButtons extends Component {
           >
             <Grid item xs={12} sm={4} md={12} lg={12}>
               <Button
+                onClick={this.props.renderPdf}
                 size="large"
                 style={{
                   backgroundColor: "green",
@@ -34,6 +35,7 @@ class EventButtons extends Component {
             <Grid item xs={12} sm={4} md={12} lg={6}>
               {" "}
               <Button
+                onClick={this.props.resetData}
                 size="large"
                 style={{ backgroundColor: "red", color: "blue", width: "100%" }}
               >
@@ -43,6 +45,7 @@ class EventButtons extends Component {
             <Grid item xs={12} sm={4} md={12} lg={6}>
               {" "}
               <Button
+                onClick={this.props.loadExample}
                 size="large"
                 style={{
                   backgroundColor: "gray",

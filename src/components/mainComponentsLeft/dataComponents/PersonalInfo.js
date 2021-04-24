@@ -4,6 +4,7 @@ import Text from "./buildingBlocks/Text";
 import PhoneField from "material-ui-phone-number";
 import Grid from "@material-ui/core/Grid";
 import CustomTextField from "./buildingBlocks/Textfield";
+import UploadButtons from "./buildingBlocks/UploadBut2";
 
 class PersonalInfo extends Component {
   render() {
@@ -40,7 +41,7 @@ class PersonalInfo extends Component {
         <Text
           label={datas.labels.LastName}
           value={this.props.personalInfo.lastName}
-          onChange={(e) => this.props.handlePersonalInfoChange("lastName", e)}
+          onClick={(e) => this.props.handlePersonalInfoChange("lastName", e)}
         />
         <Text
           label={datas.labels.Email}
@@ -65,11 +66,7 @@ class PersonalInfo extends Component {
             onChange={(e) => this.props.handlePhone("phoneNumber", e)}
           />
         </Grid>
-        <Text
-          label={datas.labels.Photo}
-          value={this.props.personalInfo.photo}
-          disabled
-        />
+
         <Text
           label={datas.labels.GitHub}
           placeholder={datas.placeholder.GitHub}
@@ -81,6 +78,9 @@ class PersonalInfo extends Component {
           placeholder={datas.placeholder.LinkedIn}
           value={this.props.personalInfo.linkedIn}
           onChange={(e) => this.props.handlePersonalInfoChange("linkedIn", e)}
+        />
+        <UploadButtons
+          onClick={(e) => this.props.handlePersonalInfoFileChange(e)}
         />
         <CustomTextField
           placeholder={datas.placeholder.Description}

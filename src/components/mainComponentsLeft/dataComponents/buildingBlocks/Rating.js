@@ -30,7 +30,7 @@ class RatingField extends Component {
         </Grid>
         <Grid item>
           <Rating
-            name="uniqu-rating"
+            id={this.props.key}
             defaultValue={0}
             precision={0.5}
             emptyIcon={<StarBorderIcon fontSize="inherit" />}
@@ -41,7 +41,7 @@ class RatingField extends Component {
         </Grid>
         <Grid item>
           <ButtonGroup variant="contained">
-            <Button color="secondary">
+            <Button color="secondary" onClick={this.props.onClick}>
               <DeleteIcon />
             </Button>
           </ButtonGroup>

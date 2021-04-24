@@ -13,9 +13,7 @@ class Skills extends Component {
 
     const skillsCopy = this.props.skills.slice();
     const skillsObject = skillsCopy.map((object) => (
-      <Box key={object.id}>
-        <TextAndRating skill={object.skill} star={object.value} />
-      </Box>
+      <TextAndRating key={object.id} skill={object.skill} star={object.value} />
     ));
 
     return (
@@ -28,7 +26,7 @@ class Skills extends Component {
         }}
       >
         <SectionTitle title={datas.title.Title} />
-        {skillsObject}
+        <Box>{skillsObject}</Box>
       </Box>
     );
   }

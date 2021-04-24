@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SectionTitle from "./buildingBlocks/baseBlocks/SectionTitle";
 import BoldAndText from "./buildingBlocks/BoldAndText";
-import img from "./buildingBlocks/baseBlocks/prof.png";
 
 class Sidebar extends Component {
   render() {
@@ -23,9 +22,9 @@ class Sidebar extends Component {
         }}
       >
         <img
-          src={img}
+          src={this.props.personalInformation.photo}
           alt="profile pic tu re"
-          style={{ height: "55mm", width: "55mm", marginTop: "15px" }}
+          style={{ height: "75mm", width: "55mm", marginTop: "15px" }}
         />
 
         <SectionTitle title={datas.labels.Title} />

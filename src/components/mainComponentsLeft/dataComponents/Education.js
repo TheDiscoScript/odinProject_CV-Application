@@ -21,46 +21,47 @@ class Education extends Component {
       },
       placeholder: {},
     };
+
     const educationObject = this.props.education.map((object) => (
       <Grid container spacing={1} key={object.id}>
         <Text
           label={datas.labels.Name}
-          value={this.props.education.university}
+          value={object.university}
           onChange={(e) =>
             this.props.handleEducationChange("university", object.id, e)
           }
         />
         <Text
           label={datas.labels.City}
-          value={this.props.education.city}
+          value={object.city}
           onChange={(e) =>
             this.props.handleEducationChange("city", object.id, e)
           }
         />
         <Text
           label={datas.labels.Degree}
-          value={this.props.education.degree}
+          value={object.degree}
           onChange={(e) =>
             this.props.handleEducationChange("degree", object.id, e)
           }
         />
         <Text
           label={datas.labels.Subject}
-          value={this.props.education.subject}
+          value={object.subject}
           onChange={(e) =>
             this.props.handleEducationChange("subject", object.id, e)
           }
         />
         <Date
           label={datas.labels.From}
-          value={this.props.education.from}
+          value={object.from}
           onChange={(e) =>
             this.props.handleEducationChange("from", object.id, e)
           }
         />
         <Date
           label={datas.labels.To}
-          value={this.props.education.to}
+          // value={object.to}
           onChange={(e) => this.props.handleEducationChange("to", object.id, e)}
         />
         <Grid
@@ -78,9 +79,17 @@ class Education extends Component {
           }}
         >
           <FormControlLabel
-            control={<Switch name="checkedB" color="primary" />}
-            label="Till now"
-            disabled
+            control={
+              <Switch
+                name="checkedB"
+                color="primary"
+                checked={object.checked}
+                onChange={(e) =>
+                  this.props.handleEducationToggle("checked", object.id, e)
+                }
+              />
+            }
+            label="Ongoing"
           />
         </Grid>
         <Buttons
