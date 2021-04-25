@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AACA,iBAGE,qBAAsB,CACtB,SAAU,CACV,QAAS,CACT,6CACF","file":"main.af4b4f01.chunk.css","sourcesContent":["/* Box sizing rules */\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-family: Roboto, Arial, Helvetica, sans-serif;\r\n}\r\n"]}
