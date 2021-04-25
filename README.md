@@ -1,13 +1,30 @@
-# Getting Started with Create React App
+# Welcome to roject 👋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🏠 [Homepage](http://Willdooo.github.io/odinProject_CV-Application)
 
-### `npm install`
+### Description
 
-### `npm start`
+First project done with React and Material.UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+npm install
+```
+
+## Start
+
+```sh
+npm start
+```
+
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
