@@ -31,7 +31,7 @@ class DataPanel extends Component {
           resetData={this.props.resetData}
           loadExample={this.props.loadExample}
           handlePersonalInfoFileChange={this.props.handlePersonalInfoFileChange}
-          renderPdf={this.props.renderPdf}
+          renderPdf={this.props.content}
         />
       </div>
     );

@@ -3,6 +3,7 @@ import Box from "@material-ui/core/Box";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import ReactToPrint from "react-to-print";
 
 class EventButtons extends Component {
   render() {
@@ -20,17 +21,21 @@ class EventButtons extends Component {
             spacing={1}
           >
             <Grid item xs={12} sm={4} md={12} lg={12}>
-              <Button
-                onClick={this.props.renderPdf}
-                size="large"
-                style={{
-                  backgroundColor: "green",
-                  color: "yellow",
-                  width: "100%",
-                }}
-              >
-                Generate PDF
-              </Button>
+              <ReactToPrint
+                trigger={() => (
+                  <Button
+                    size="large"
+                    style={{
+                      backgroundColor: "green",
+                      color: "yellow",
+                      width: "100%",
+                    }}
+                  >
+                    Generate PDF
+                  </Button>
+                )}
+                content={this.props.renderPdf}
+              />
             </Grid>
             <Grid item xs={12} sm={4} md={12} lg={6}>
               {" "}

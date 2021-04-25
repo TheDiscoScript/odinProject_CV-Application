@@ -7,8 +7,6 @@ import { withStyles } from "@material-ui/core/styles";
 import { v4 as uuidv4 } from "uuid";
 import defaultImg from "./mainComponentsRight/buildingBlocks/baseBlocks/prof.png";
 import exampleImg from "./mainComponentsRight/buildingBlocks/baseBlocks/exampleprof.jpg";
-import { Page, Text, View, Document } from "@react-pdf/renderer";
-import ReactPDF from "@react-pdf/renderer";
 
 const useStyles = (theme) => ({
   root: {
@@ -23,6 +21,7 @@ const useStyles = (theme) => ({
 class Main extends Component {
   constructor(props) {
     super(props);
+    this.myRef = React.createRef();
     this.state = {
       personalInfo: {
         //no ID needed as there will be only 1 personalInfo
@@ -303,46 +302,6 @@ class Main extends Component {
     });
   };
 
-  /*renderPdf = () => {
-    const MyDocument = () => (
-      <Document>
-        <Paper
-          style={{
-            position: "sticky",
-            top: "10px",
-            width: "210mm",
-            height: "297mm",
-            padding: "0",
-          }}
-          elevation={18}
-        >
-          <PreviewPanel
-            personalInfo={this.state.personalInfo}
-            work={this.state.experience}
-            education={this.state.education}
-            skills={this.state.skills}
-          />
-        </Paper>
-      </Document>
-    );
-    ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
-  };*/
-  renderPdf = () => {
-    const MyDocument = () => (
-      <Document>
-        <Page size="A4">
-          <View>
-            <Text>Section #1</Text>
-          </View>
-          <View>
-            <Text>Section #2</Text>
-          </View>
-        </Page>
-      </Document>
-    );
-    ReactPDF.render(<MyDocument />, "example.pdf");
-  };
-
   //
   //
   //
@@ -382,7 +341,7 @@ class Main extends Component {
                 resetData={this.resetData}
                 loadExample={this.loadExample}
                 handlePersonalInfoFileChange={this.handlePersonalInfoFileChange}
-                renderPdf={this.renderPdf}
+                content={() => this.myRef.current}
               />
             </Paper>
           </Grid>
@@ -409,6 +368,7 @@ class Main extends Component {
               elevation={18}
             >
               <PreviewPanel
+                ref={this.myRef}
                 personalInfo={this.state.personalInfo}
                 work={this.state.experience}
                 education={this.state.education}
