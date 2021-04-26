@@ -41,7 +41,7 @@ class PersonalInfo extends Component {
         <Text
           label={datas.labels.LastName}
           value={this.props.personalInfo.lastName}
-          onClick={(e) => this.props.handlePersonalInfoChange("lastName", e)}
+          onChange={(e) => this.props.handlePersonalInfoChange("lastName", e)}
         />
         <Text
           label={datas.labels.Email}
