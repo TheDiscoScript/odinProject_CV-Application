@@ -1,4 +1,4 @@
-# Welcome to roject 👋
+# Welcome to CV-App project! 👋
 
 ### 🏠 [Homepage](http://Willdooo.github.io/odinProject_CV-Application)
 
