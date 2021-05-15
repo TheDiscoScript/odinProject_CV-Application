@@ -4,7 +4,14 @@
 
 ### Description
 
-First project done with React and Material.UI
+This is the first proejct I made in React. I haven''t used React Hooks, only React classes.
+It is fairly simple project as there is not too much logic in it.
+Still it took me a while because I wasn't really comfortable with React at first. I also used Material-UI as React framework.
+Project made as part of [The Odin Project's curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/cv-application).
+
+### Development
+
+- React, JS, CSS
 
 ## Install
 
