@@ -31,7 +31,6 @@ Open http://localhost:3000 to view it in the browser.
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-test
 
 ---
 
